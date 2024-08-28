@@ -2,3 +2,8 @@
     background-image: url('/bg.jpg');
     
 }
+.image{
+    width: 100%;
+  height: auto;
+  mask-image: linear-gradient(black,transparent);
+}

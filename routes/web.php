@@ -29,8 +29,8 @@ Route::get('/about', function () {
         'title' => "About Us"
     ]);
 });
-Route::get('/items', function () {
-    return view("developers",[
+Route::get('/developer', function () {
+    return view("developer",[
         'title' => "Developer"
     ]);
 });
