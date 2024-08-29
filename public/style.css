@@ -2,8 +2,66 @@
     background-image: url('/bg.jpg');
     
 }
+.bg-item{
+  background-image: url('/anime-moon-landscape.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
 .image{
     width: 100%;
   height: auto;
   mask-image: linear-gradient(black,transparent);
+}
+.anim {
+  transition: 0.3s;
+}
+
+.anim:hover {
+   /* Ubah warna border saat hover */
+  transform: scale(1.02); /* Memperbesar elemen saat hover */
+}
+.image img {
+  width: 256px;  /* Ukuran lebar tetap */
+  height: 256px; /* Ukuran tinggi tetap */
+  object-fit: cover; /* Menjaga aspek rasio gambar */
+}
+.image-item img {
+  width: 200px;  /* Ukuran lebar tetap */
+  height: 200px; /* Ukuran tinggi tetap */
+  object-fit: cover; /* Menjaga aspek rasio gambar */
+ 
+}
+
+.fade1{
+  animation: fadeInUp 0.25s;
+}
+.fade2{
+  animation: fadeInUp 0.5s;
+}
+.fade3{
+  animation: fadeInUp 0.75s;
+}
+.fade4{
+  animation: fadeInUp 1s;
+}
+
+@keyframes fadeInUp {
+  0% {
+      transform: translateY(20px); /* Mulai dari bawah */
+      opacity: 0; /* Transparan di awal */
+  }
+  100% {
+      transform: translateY(0); /* Akhir di posisi semula */
+      opacity: 1; /* Sepenuhnya terlihat di akhir */
+  }
+}
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi yang halus */
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px); /* Mengangkat elemen ke atas */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek "terangkat" */
 }
