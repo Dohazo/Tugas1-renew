@@ -1,14 +1,28 @@
 .background {
     background-image: url('/bg.jpg');
-    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .bg-item{
-  background-image: url('/anime-moon-landscape.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('/anime-moon-landscape.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   
 }
+
+.title{
+  color: #43403b;
+}
+
+.bg-about{
+  background-color: #EDE1D1;
+}
+
+
 .image{
     width: 100%;
   height: auto;
@@ -20,7 +34,8 @@
 
 .anim:hover {
    /* Ubah warna border saat hover */
-  transform: scale(1.02); /* Memperbesar elemen saat hover */
+  transform: scale(1.02);
+  cursor: pointer; /* Memperbesar elemen saat hover */
 }
 .image img {
   width: 256px;  /* Ukuran lebar tetap */
@@ -64,4 +79,5 @@
 .hover-lift:hover {
   transform: translateY(-5px); /* Mengangkat elemen ke atas */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek "terangkat" */
+  cursor: pointer;
 }
