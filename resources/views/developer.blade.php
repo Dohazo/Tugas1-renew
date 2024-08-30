@@ -5,7 +5,7 @@
     <h1 class="text-7xl">Developers</h1>
 </div>
 <div>
-    wdwd
+   Halo namaku erik
 </div>
 </div>
 @endsection
