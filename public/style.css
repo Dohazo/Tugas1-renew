@@ -17,11 +17,36 @@
 .title{
   color: #43403b;
 }
+.para{
+  color: #6d6861;
+}
 
 .bg-about{
   background-color: #EDE1D1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; /* Tambahkan ini */
+  margin: 0;
+  padding: 0;
 }
+@media (max-width: 768px) {
+  .bg-about {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: scroll;
+    background-color: #EDE1D1;
 
+  }
+  .desc{
+    background-color: #c2b9ac;
+  }
+}
+.desc{
+  background-color: #c2b9ac;
+  padding: 5%;
+}
 
 .image{
     width: 100%;
@@ -61,7 +86,31 @@
 .fade4{
   animation: fadeInUp 1s;
 }
+.right2{
+  animation: fadeInRight 1s;
+}
+.left2{
+  animation: fadeInLeft 1s;
+}
+.right1{
+  animation: fadeInRight 0.5s;
+}
+.left1{
+  animation: fadeInLeft 0.5s;
+}
 
+.i1{
+  animation: fadeInUp 0.25s;
+}
+.i2{
+  animation: fadeInUp 0.75s;
+}
+.i3{
+  animation: fadeInUp 1.25s;
+}
+.i4{
+  animation: fadeInUp 1.75s;
+}
 @keyframes fadeInUp {
   0% {
       transform: translateY(20px); /* Mulai dari bawah */
@@ -69,6 +118,26 @@
   }
   100% {
       transform: translateY(0); /* Akhir di posisi semula */
+      opacity: 1; /* Sepenuhnya terlihat di akhir */
+  }
+}
+@keyframes fadeInRight {
+  0% {
+      transform: translateX(30px); /* Mulai dari bawah */
+      opacity: 0; /* Transparan di awal */
+  }
+  100% {
+      transform: translateX(0); /* Akhir di posisi semula */
+      opacity: 1; /* Sepenuhnya terlihat di akhir */
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+      transform: translateX(-30px); /* Mulai dari bawah */
+      opacity: 0; /* Transparan di awal */
+  }
+  100% {
+      transform: translateX(0); /* Akhir di posisi semula */
       opacity: 1; /* Sepenuhnya terlihat di akhir */
   }
 }
