@@ -150,3 +150,56 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek "terangkat" */
   cursor: pointer;
 }
+
+.card {
+  
+  width: 240px;
+  height: 300px;
+  position: relative;
+ 
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+
+.card_front,
+.card_back {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   border-radius: 6px;
+   backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   /* Just styling the text nicely */
+   line-height: 150px;
+ 
+   font-size: 20px;
+   text-align: center;
+  
+}
+.all{
+  z-index: 1;
+}
+.bg-dev{
+  background-image: url('/devwall.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+  position: relative; 
+}
+
+.card_front {
+  
+  z-index: 1;
+}
+
+.card_back {
+ 
+  transform: rotateY(180deg);
+}
+.card:hover{
+  transform: rotateY(180deg);
+}
