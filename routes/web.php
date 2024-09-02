@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ItemController;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,3 +36,5 @@ Route::get('/developer', function () {
         'title' => "Developer"
     ]);
 });
+Route::get('/', [ItemController::class, 'index']);
+Route::get('/items/plus/{param}', [ItemController::class, 'plus']);
