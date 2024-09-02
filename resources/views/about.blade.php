@@ -1,7 +1,7 @@
 @extends('base')
 @section('content')
-<div class="justify-center items-center md:flex bg-about  h-full md:h-screen md:flex flex-col">
-    <div class="grid md:grid-rows-3 md:grid-flow-col flex  items-center justify-center pt-16 md:pt-0 text-center">
+<div class="justify-center items-center md:flex bg-about h-full md:h-screen md:flex flex-col">
+    <div class="grid md:grid-rows-3 md:grid-flow-col flex items-center justify-center md:pt-16 md:pt-0 text-center">
 
         <div class=" flex items-center justify-center w-full fade3 md:row-span-3 left1">
             <img src="{{url('anibusss.png')}}" class="w-72 text-center" alt="">
