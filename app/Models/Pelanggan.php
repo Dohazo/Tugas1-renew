@@ -13,7 +13,7 @@ class Pelanggan extends Model
         "nama",
         "tahun_masuk",
         "tgl_lahir",
-        "alamt",
+        "alamat",
         "notelp",
         "is_aktif"
     ];

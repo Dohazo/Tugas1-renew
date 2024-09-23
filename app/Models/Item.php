@@ -14,5 +14,8 @@ class Item extends Model
         "link",
         "description"
     ];
+    public static array $rules  = [
+    
+    ];
     use HasFactory;
 }

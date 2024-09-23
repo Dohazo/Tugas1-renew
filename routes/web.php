@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ItemController;
+use App\Models\Pelanggan;
+use App\Models\Pembelian;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
@@ -38,3 +40,11 @@ Route::get('/developer', function () {
 });
 Route::get('/', [ItemController::class, 'index']);
 Route::get('/items/plus/{param}', [ItemController::class, 'plus']);
+// Route::get("/loop",[ItemController::class,'gg']);
+Route::get('/loop', function () {
+    return view("teslopp",[
+        "pelanggan" => Pelanggan::with(['pembelian'])->get(),
+        "pembelian"=> Pembelian::with(['pelanggan'])->get(),
+        "title" => "Testing loop"
+    ]);
+});
