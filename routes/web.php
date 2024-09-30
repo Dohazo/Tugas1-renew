@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\PelangganController;
 use App\Models\Pelanggan;
 use App\Models\Pembelian;
 use Illuminate\Routing\Route as RoutingRoute;
@@ -47,4 +48,18 @@ Route::get('/loop', function () {
         "pembelian"=> Pembelian::with(['pelanggan'])->get(),
         "title" => "Testing loop"
     ]);
+})->name('loop');
+Route::get('/crude', function () {
+    return view("teslopp",[
+        "pelanggan" => Pelanggan::with(['pembelian'])->get(),
+        "pembelian"=> Pembelian::with(['pelanggan'])->get(),
+        "title" => "CRUD"
+    ]);
+
 });
+
+Route::get('/Pelanggan/create',[PelangganController::class,"create"])->name('Pelanggan.create');
+
+Route::post('/Pelanggan/insert',[PelangganController::class,'insert'])->name('Pelanggan.insert');
+Route::get('/Pelanggan/update',[PelangganController::class,'toUpdate'])->name('Pelanggan.update');
+Route::post('/Pelanggan/update',[PelangganController::class,'kirim'])->name('Pelanggan.update');

@@ -1,4 +1,5 @@
 @extends('base')
+@section('content')
 <div>
 
 
@@ -58,3 +59,4 @@
             </tbody>
         </table>
     </div>
+@endsection

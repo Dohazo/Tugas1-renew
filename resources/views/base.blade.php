@@ -9,14 +9,10 @@
     <title>{{ $title }}</title>
 </head>
 <body>
-   
-
   <div>
-    
       @include('nav')  
   </div>
-    
-<div class>
+<div>
     @yield('content')
 </div>
 </body>

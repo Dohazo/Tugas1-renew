@@ -1,4 +1,4 @@
-<nav class="bg-gray-800 w-full z-10 shadow-2xl  fixed">
+<nav class="bg-gray-800 w-full z-10 shadow-2xl">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -36,6 +36,8 @@
             <a href="/items" class="rounded-md {{($title === "items" ? "px-3 py-2 text-sm font-medium text-white bg-gray-900" : "px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white")}}">Items</a>
             <a href="/about" class="rounded-md {{($title === "About Us" ? "px-3 py-2 text-sm font-medium text-white bg-gray-900" : "px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white")}}">About Us</a>
             <a href="/developer" class="rounded-md {{($title === "Developer" ? "px-3 py-2 text-sm font-medium text-white bg-gray-900" : "px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white")}}">Developer</a>
+            <a href="{{route('Pelanggan.create')}}" class="rounded-md {{($title === "CRUD" ? "px-3 py-2 text-sm font-medium text-white bg-gray-900" : "px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white")}}">CRUD</a>
+            <a href="{{route('Pelanggan.update')}}" class="rounded-md {{($title === "CRUD" ? "px-3 py-2 text-sm font-medium text-white bg-gray-900" : "px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white")}}">Update</a>
           </div>
         </div>
       </div>
